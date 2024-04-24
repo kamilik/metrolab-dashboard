@@ -1,0 +1,211 @@
+/* Note: This example only works with Windows Insider Preview Builds 16237+ or the Fall Creators Update. */
+
+:root {
+	--pubg: #f3aa1d;
+	--background: #E8E8E8;
+	--app-container: #1d1e22;
+	--text-10: #A9A9A9;
+}
+
+
+body {
+	color: var(--text-10);
+	background-color: var(--background);
+	font-family: segoe-ui_normal, Segoe UI, Segoe, Segoe WP, Helvetica Neue, Helvetica, sans-serif;
+	display: grid;
+	grid-template-areas:
+		"header header header"
+		"nav section aside"
+		"footer footer footer";
+	grid-template-rows: 80px 1fr 0px;
+	grid-template-columns: 15% 1fr 10%;
+	grid-gap: 1px;
+	height: 100vh;
+	margin: 0px;
+}
+
+header {
+	background: var(--app-container);
+	grid-area: header;
+}
+
+nav {
+	background: var(--app-container);
+	grid-area: nav;
+}
+
+section {
+	background: var(--app-container);
+	grid-area: section;
+}
+
+aside {
+	background: var(--app-container);
+	grid-area: aside;
+}
+
+
+header,
+nav,
+section,
+aside {
+	background: var(--app-container);
+	padding: 10px;
+}
+
+.nav-item {
+	color: var(--text-10);
+	padding: 16px;
+	margin: 1px;
+}
+
+.nav-item:hover {
+	color: var(--pubg);
+	cursor: pointer;
+}
+
+.selected {
+	padding: 16px;
+	background-color: var(--pubg);
+	color: var(--app-container);
+	border-radius: 0px;
+	margin: 1px;
+}
+
+.selected:hover {
+	color: var(--app-container);
+}
+
+#orders-stat{
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+
+
+
+.div1 { grid-area: 1 / 1 / 2 / 2; }
+.div2 { grid-area: 1 / 2 / 2 / 3; }
+.div3 { grid-area: 1 / 3 / 2 / 4; }
+.div4 { grid-area: 1 / 4 / 2 / 5; }
+.div5 { grid-area: 1 / 5 / 2 / 6; }
+.div6 { grid-area: 1 / 6 / 2 / 7; }
+.div7 { 
+	grid-area: 2 / 1 / 3 / 7; 
+	border: 2px solid var(--background);
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: 10% 90%;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	gap: 2px;
+}
+
+.div11 { grid-area: 1 / 1 / 2 / 2; }
+.div12 { grid-area: 1 / 2 / 2 / 3; }
+.div13 { grid-area: 1 / 3 / 2 / 4; }
+.div14 { grid-area: 1 / 4 / 2 / 5; }
+.div15 { grid-area: 1 / 5 / 2 / 6; }
+.div16 { grid-area: 1 / 6 / 2 / 7; }
+.div17 { grid-area: 1 / 7 / 2 / 8; }
+.div18 { 
+	grid-area: 2 / 1 / 3 / 8; 
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: 10%;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+}
+
+.div21 { grid-area: 1 / 1 / 2 / 2; }
+.div22 { grid-area: 1 / 2 / 2 / 3; }
+.div23 { grid-area: 1 / 3 / 2 / 4; }
+.div24 { grid-area: 1 / 4 / 2 / 5; }
+.div25 { grid-area: 1 / 5 / 2 / 6; }
+.div26 { grid-area: 1 / 6 / 2 / 7; }
+.div27 { grid-area: 1 / 7 / 2 / 8; }
+
+
+
+.status {
+	border: 2px solid var(--background);
+	padding: 10px;
+}
+
+.number {
+	font-size: 70px;
+	color: white;
+	text-align: center;
+	margin: auto;
+	color: var(--pubg);
+}
+
+.text {
+	font-size: 18px;
+	color: white;
+	text-align: center;
+	margin: auto;
+}
+
+.table-header{
+	padding: 16px;
+	border-right: var(--background);
+	text-align: center;
+	background-color: var(--pubg);
+	color: white;
+}
+
+ul.line li{
+	display: inline;
+	margin: 60px;
+}
+
+.tr-clients-info{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 10% 90%;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px; 
+}
+
+
+
+.table-header{
+	background-color: var(--pubg);
+	font-size: 20px;
+	text-align: center;
+}
+
+.info-box{
+	border: 2px solid white;
+	padding: 10px;
+	background-color: white;
+	color: black;
+}
+
+.topup{
+	color: green;
+	font-weight: 700;
+	text-align: center;
+}
+
+.freeze{
+	color: gray;
+	font-weight: 700;
+	text-align: center;
+}
+
+.minus{
+	color: red;
+	font-weight: 700;
+	text-align: center;
+}
+
+.tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: var(--pubg);border-collapse: collapse;}
+    .tftable th {font-size:18px;background-color:var(--pubg);border-width: 1px;border-style: solid;border-color: var(--app-container);text-align:center;}
+    .tftable tr {background-color:#ffffff; text-align:center;}
+    .tftable td {font-size:14px;border-width: 1px;border-style: solid;border-color: var(--pubg);}
+    .tftable tr:hover {background-color:#fff2e0;}
+
